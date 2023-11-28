@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity-Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="waktu">
+        <!-- Tambahkan ini di dalam elemen body -->
+        <div id="timer-display">00:00</div>
+    </div>
+    
+    <div class="card">
+        <h4>PRODUCTIVITY CONTROL</h4>
+        <div class="input">
+            <input type="text" id="productive-time" placeholder="productive time">
+            <input type="text" id="break-time" placeholder="break time">
+        </div>
+
+        <div class="btn">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="stopTimer()">Stop</button>
+        </div>        
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
