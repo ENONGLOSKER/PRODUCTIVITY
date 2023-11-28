@@ -42,3 +42,18 @@ function updateTimerDisplay(time) {
 function showNotification(message) {
     alert(message);
 }
+
+function updateClock() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+    const formattedTime = `${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    document.getElementById('time').innerText = formattedTime;
+
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = now.toLocaleDateString('id-ID', dateOptions);
+    document.getElementById('date').innerText = formattedDate;
+}
+
+setInterval(updateClock, 1000);

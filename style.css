@@ -10,9 +10,13 @@ body{
     font-weight: bold;
     color: whitesmoke;
 }
+.ket{
+    display: flex;
+    justify-content: center;
+}
 .card{
     width: 300px;
-    margin: 50px auto;
+    margin: 10px auto;
     text-align: center;
     padding:10px;
     border-radius: 8px;
@@ -54,7 +58,19 @@ body{
     background-color: rgb(255, 0, 89);
 }
 
-
+.clock{
+    text-align: center;
+    color: whitesmoke;
+    font-size: medium;
+    font-weight: bold;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    background-color: rgb(71, 164, 246);
+    width: 300px;
+    align-items: center;
+    border-radius: 4px;
+}
 
 
 
