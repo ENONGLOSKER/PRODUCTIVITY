@@ -2,6 +2,7 @@ let productiveTime;
 let breakTime;
 let timer;
 let intervals;
+let audio = document.getElementById("audio");
 
 function startTimer() {
     productiveTime = parseInt(document.getElementById('productive-time').value) * 60 || 0; // Mengonversi menit ke detik
@@ -16,9 +17,11 @@ function startTimer() {
                 updateTimerDisplay(productiveTime);
 
                 if (productiveTime % breakTime === 0 && productiveTime !== 0) {
+                    playSound();
                     showNotification('Break Time!');
                 }
             } else {
+                playSound();
                 clearInterval(timer);
                 showNotification('Session Completed!');
             }
@@ -40,6 +43,7 @@ function updateTimerDisplay(time) {
 }
 
 function showNotification(message) {
+    // audio.play();
     alert(message);
 }
 
@@ -57,3 +61,7 @@ function updateClock() {
 }
 
 setInterval(updateClock, 1000);
+
+function playSound() {
+    audio.play();
+}
